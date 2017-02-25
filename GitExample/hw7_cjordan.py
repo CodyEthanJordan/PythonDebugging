@@ -52,9 +52,20 @@ def gardenreport(possible, length, carrot, lettuce, pepper, tomato):
     else:
         print("Your garden is IMPOSSIBLE!")
         
-    
-    
+    print("Row Length: " + str(length))
+    print("Plants to plant")
+    print("---------------")
+    print("  Carrots:" + str(carrot))
+    print("  Lettuce:" + str(lettuce))
+    print("  Peppers:" + str(pepper))
+    print("  Tomatoes:" + str(tomato))
+    print("") #blank line at the end
     return
     
-print(garden(12, carrot=40, lettuce=2, pepper=6, tomato=3))
+problem1Garden = garden(12, carrot=40, lettuce=2, pepper=6, tomato=3)
+print(problem1Garden)
 
+#output report both ways
+gardenreport(*problem1Garden)
+
+gardenreport(*garden(12, carrot=40, lettuce=2, pepper=6, tomato=3))
