@@ -14,7 +14,11 @@ def garden(length, carrot=0, lettuce=0, pepper=0, tomato=0):
     -total required length
     -number of each plant required'''
 
-    gardenRows = np.array([requiredSpace('carrot', carrot)])
+    gardenRows = np.array([requiredSpace('carrot', carrot),
+                           requiredSpace('lettuce', lettuce),
+                           requiredSpace('pepper', pepper),
+                           requiredSpace('tomato', tomato),
+                           ])
     
     return (True, 10, 1, 2, 3, 4) #Mock output
 
@@ -32,8 +36,8 @@ def requiredSpace(plantName, poundsDesired):
                       'pepper'  : 2.0,
                       'tomato'  : 10.0}
     
-    plantsNeeded = np.ceil(poundsDesired[plantName])
-    feetNeeded = plantsNeeded * requiredFeet[planeName]
+    plantsNeeded = np.ceil(poundsDesired / poundsProduced[plantName])
+    feetNeeded = plantsNeeded * requiredFeet[plantName]
     
     return plantsNeeded, feetNeeded
                          
