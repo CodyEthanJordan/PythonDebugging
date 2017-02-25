@@ -14,12 +14,22 @@ def garden(length, carrot=0, lettuce=0, pepper=0, tomato=0):
     -total required length
     -number of each plant required'''
 
+    #first column is plants needed, second is feet needed
     gardenRows = np.array([requiredSpace('carrot', carrot),
                            requiredSpace('lettuce', lettuce),
                            requiredSpace('pepper', pepper),
                            requiredSpace('tomato', tomato),
                            ])
+
+    feetNeeded = np.max(gardenRows[:,1])
     
+    if(feetNeeded > length):
+        willFit = False
+    else:
+        willFit = True
+        
+    
+        
     return (True, 10, 1, 2, 3, 4) #Mock output
 
 def requiredSpace(plantName, poundsDesired):
