@@ -46,3 +46,4 @@ def requiredSpace(plantName, poundsDesired):
     return plantsNeeded, feetNeeded
                          
 print(garden(12, carrot=40, lettuce=2, pepper=6, tomato=3))
+
