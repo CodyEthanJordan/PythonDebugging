@@ -22,12 +22,8 @@ def garden(length, carrot=0, lettuce=0, pepper=0, tomato=0):
                            ])
 
     feetNeeded = np.max(gardenRows[:,1])
+    willFit = feetNeeded > length    
     
-    if(feetNeeded > length):
-        willFit = False
-    else:
-        willFit = True
-        
     
         
     return (True, 10, 1, 2, 3, 4) #Mock output
