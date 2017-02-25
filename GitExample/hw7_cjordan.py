@@ -22,11 +22,9 @@ def garden(length, carrot=0, lettuce=0, pepper=0, tomato=0):
                            ])
 
     feetNeeded = np.max(gardenRows[:,1])
-    willFit = feetNeeded > length    
-    
-    
+    willFit = feetNeeded < length    
         
-    return (True, 10, 1, 2, 3, 4) #Mock output
+    return (willFit, feetNeeded, *gardenRows[:,1]) #Mock output
 
 def requiredSpace(plantName, poundsDesired):
     '''Figures out how long the row needs to be, and number of plants needed.
