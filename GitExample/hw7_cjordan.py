@@ -69,3 +69,26 @@ print(problem1Garden)
 gardenreport(*problem1Garden)
 
 gardenreport(*garden(12, carrot=40, lettuce=2, pepper=6, tomato=3))
+
+
+# Problem 2
+print('Problem 2')
+
+def mortgage_payment(termYears, apr, initialPrinciple):
+    '''Calculates monthly mortage payment under given conditions
+    
+    Takes in the term in years, the annual percentage in percent form, and the initial amount borrowed
+    
+    returns the monthly payment based on formula from
+    
+    http://en.wikipedia.org/wiki/Mortgage_calculator '''
+    
+    r = apr / 100 / 12
+    N = 12 * termYears
+    
+    return (initialPrinciple * r * (1+r)**N) / ((1+r)**N - 1)
+    
+print(mortgage_payment(30, 4, 200000))
+# Checked this against Google's mortgage calculator, works
+    
+    
