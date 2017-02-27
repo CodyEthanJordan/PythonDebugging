@@ -40,20 +40,14 @@ git diff 50bb^ 50bb -- hw7_cjordan.py
 git checkout 50bb
 
 # can open the files, look around
+ls
+
+
 # to go back we can check out the main branch again
 git checkout master
 
 # QUESTION: what did I change between 50bb and the next commit? and what message did I make?
-
-
-
-
-# In order to make this example I first made a new branch
-git commit -b NewBranch
-
-# To push this branch to the remote I used
-git push origin master
-
+# QUESTION: can you find a commit where the code won't run?
 
 # To show remote branches
 git branch -r
@@ -61,12 +55,22 @@ git branch -r
 # Local branches with
 git branch -a
 
+# In order to make this example I first made a new branch
+git commit -b NewBranch
+
+# DEBUGGING
+# Make changes, learn about debugging
+# git add, git commit
+
+# now lets tag this as a release
+git tag -a "Handin 7.0" -m "Tag releases to indicate this is what I am turning in"
+
+# To push this branch to the remote I used
+# git push origin master
+
 # To blow everyting up
 git reset --hard
 git checkout master
-
-# To go to a previous commit
-git checkout CommitIDTHingy
 
 # Can also check out tags
 git checkout Part1
