@@ -37,6 +37,16 @@ git diff 50bb^ 50bb -- hw7_cjordan.py
 # Red text with minux signs is what got removed, text next to plus signs is added
 
 # we can also reset the whole repo to this state
+git checkout 50bb
+
+# can open the files, look around
+# to go back we can check out the main branch again
+git checkout master
+
+# QUESTION: what did I change between 50bb and the next commit? and what message did I make?
+
+
+
 
 # In order to make this example I first made a new branch
 git commit -b NewBranch
