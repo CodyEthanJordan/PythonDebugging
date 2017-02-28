@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Cody Jordan
 # Homework 7
 
@@ -24,7 +25,7 @@ def garden(length, carrot=0, lettuce=0, pepper=0, tomato=0):
     feetNeeded = np.max(gardenRows[:,1])
     willFit = feetNeeded < length    
         
-    return (willFit, feetNeeded, *gardenRows[:,1]) #Mock output
+    return (willFit, feetNeeded, *gardenRows[:,1])
 
 def requiredSpace(plantName, poundsDesired):
     '''Figures out how long the row needs to be, and number of plants needed.
@@ -40,7 +41,8 @@ def requiredSpace(plantName, poundsDesired):
                       'pepper'  : 2.0,
                       'tomato'  : 10.0}
     
-    plantsNeeded = np.ceil(poundsDesired / poundsProduced[plantName])
+    plantsNeeded = np.floor(poundsDesired / poundsProduced[plantName])
+    # floor function?
     feetNeeded = plantsNeeded * requiredFeet[plantName]
     
     return plantsNeeded, feetNeeded

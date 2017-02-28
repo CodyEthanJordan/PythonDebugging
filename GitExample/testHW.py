@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Testing my homework file
 
 import hw7_cjordan as hw
