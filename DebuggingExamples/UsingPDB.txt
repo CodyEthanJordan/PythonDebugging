@@ -1,0 +1,23 @@
+---------
+Using pdb
+---------
+
+pdb is the command line pythong debugger which is also integrated as part of Spyder
+You can read the official documentation here:
+https://docs.python.org/3/library/pdb.html
+I also found these resources especially helpful:
+http://stackoverflow.com/questions/4228637/getting-started-with-the-python-debugger-pdb
+
+To start pdb in spyder
+* Press the blue arrow on the toolbar which says Debug file (Ctrl + F5) *
+
+This will land you in a (pdb) interactive console in your current python environment
+
+Common commands
+w - show (w)here I am in a stack trace
+l - (l)ist nearby code
+n - go to the (n)ext line
+s - (s)tep to the next command, including entering functions
+c - (c)ontinue to the next breakpoint or end of program
+r - keep executing until the (r)eturn statement of the function you are in
+p - (p)rint the value of whatever variable you put after it, such as "p variable1"
