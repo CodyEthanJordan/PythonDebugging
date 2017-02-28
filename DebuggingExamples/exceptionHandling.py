@@ -1,11 +1,11 @@
+#!/usr/bin/env python3
 # Cody Jordan
 # Introduction to Numerical Computing
 # Exception Handling
 
-
 # what do we do if our code makes an error?
 
-x = int(input("Please enter a number: "))
+x = int(input("Please enter a number: ")) # try inputting 'One'
 
 # if we don't put in a number we get an error when we try to force the input
 # to be an integer
@@ -15,9 +15,11 @@ x = int(input("Please enter a number: "))
 # Typically this is because we are accessing user input, the filesystem, the 
 # internet, or another real-world entity
 
-try:
+try: # this is a try block, it will attempt to run the code inside
     x = int(input("Please enter a number: "))    
-except ValueError:
+except ValueError: 
+    # instead of crashing the program and printing the error this program will
+    # execute this block of code instead should it encounter a ValueError
     print('Thats not a number!')
     x = None
     

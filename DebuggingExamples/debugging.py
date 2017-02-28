@@ -22,6 +22,7 @@ y = np.sin(x)
 
 # in pdb we can print values with "p", such as "p x"
 # why won't p y work?
+#!/usr/bin/env python3
 # Put in w to see where we are in code
 
 def foo():

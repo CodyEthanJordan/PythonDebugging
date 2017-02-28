@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Cody Jordan
 # Introduction to Numerical Computing
 # Exception Handling
@@ -32,7 +33,7 @@ def CustomExceptionHandler(exceptionType, value, traceback):
     log.critical('Encountered an uncaught exception of type: ' + str(exceptionType) + ' \n' 
                  + str(value) + '\n'
                  )
-    log.critical(tb.format_tb(traceback))
+    log.critical(tb.format_tb(traceback)) # use traceback module to format stack trace
     
     # after we are done logging we can call the default excepthook function
     sys.__excepthook__(exceptionType, value, traceback)
@@ -41,6 +42,12 @@ sys.excepthook = CustomExceptionHandler # assign our handler to be used
 # note that this will NOT work in the IPython console because of how IPython 
 # handles exceptions differently
 # http://stackoverflow.com/questions/1261668/cannot-override-sys-excepthook
+# and only works unreliably in Spyder, run in the command line
 
-x = 8 / 0
+# ------------------------
+# MAIN PART OF OUR PROGRAM
+# ------------------------
+
+# cause an error
+x = 8 / 0 
 
