@@ -92,5 +92,18 @@ def mortgage_payment(termYears, apr, initialPrinciple):
     
 print(mortgage_payment(30, 4, 200000))
 # Checked this against Google's mortgage calculator, works
+
     
-    
+# Problem 3
+# Looky at what I did while Cody was showing you stuff!!!
+print("Problem 3")
+
+filename = 'exoplanet_eu_catalog.csv'
+m, r = np.genfromtxt(filename, delimiter=',', usecols=[2,8], unpack=True)
+
+plt.clf()
+plt.plot(r, m, ".")
+plt.xlabel('Radius (Rj)')
+plt.ylabel('Mass (Mj)')
+plt.title('Exoplanet Mass vs. Radius')
+plt.savefig('hw7_sol_prob3_plot1.png')
